@@ -1,7 +1,7 @@
 <section class="row">
 
 <aside class="col-4">
-        <form action="./controllers/database-controllers/efetuar_login.php" method="post">
+        <form action="./controllers/database-controllers/loginController.php" method="post">
             <fieldset>
                 <legend>Acesse a sua conta:</legend>
     

@@ -12,6 +12,7 @@
     else :
         $_SESSION["msg"] = "Falha ao efetuar login. Verifique o usuário/senha";
         $location = 'login';
+        unset($_SESSION['usuario']);
     endif;
 
     header("Location: ../../template.php?p={$location}");

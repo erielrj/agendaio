@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+if(isset($_SESSION['usuario'])){
+	var_dump($_SESSION['usuario']);
+}
 
 //Requires:
 require_once('./controllers/view-controllers/templateController.php'); //Controller

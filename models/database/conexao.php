@@ -9,7 +9,11 @@ define("PORT", 3306);
 
 
 function getConnection() {
-    $link = mysqli_connect(SERVER, USER, PASS, DB, PORT);
-    mysqli_set_charset($link, "utf8");
-    return $link;
+
+    try {
+        $link = new PDO("mysql:host=". SERVER .";dbname=". DB . ";charset=utf8mb4", USER,PASS);
+        return $link;
+    } catch (PDOException $e) {
+        return "Erro: " . $e;
+    }   
 }
